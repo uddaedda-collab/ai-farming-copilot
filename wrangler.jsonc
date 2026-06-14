@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ai-farming-copilot",
+  "main": ".output/server/index.mjs",
+  "compatibility_date": "2026-06-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".output/public"
+  },
+  "no_bundle": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": ["**/*.mjs", "**/*.js"]
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "aifarmingcopilot.space/*",
+      "zone_name": "aifarmingcopilot.space"
+    },
+    {
+      "pattern": "www.aifarmingcopilot.space/*",
+      "zone_name": "aifarmingcopilot.space"
+    }
+  ]
+}
